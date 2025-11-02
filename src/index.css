@@ -5,3 +5,22 @@
 
 /* custom */
 body { @apply bg-white text-gray-800; }
+:root {
+  --primary: #2563eb; /* blue-600 */
+  --secondary: #9333ea; /* purple-600 */
+  --accent: #f59e0b; /* amber-500 */
+  --light-bg: #f9fafb; /* gray-50 */
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}

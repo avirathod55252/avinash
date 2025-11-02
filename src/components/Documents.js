@@ -4,7 +4,7 @@ export default function Documents() {
   const [documents, setDocuments] = useState([]);
   
   // 🔗 Use your deployed backend URL from Render
-  const API_URL = "https://resume-backend.onrender.com";
+  const API_URL = "https://resume-backend-4-85df.onrender.com";
 
   // ✅ Fetch uploaded files from backend when component loads
   useEffect(() => {

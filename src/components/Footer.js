@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
           <FaGithub />
         </a>
         <a
-          href="https://www.linkedin.com/in/avinashrathod"
+          href="https://www.linkedin.com/in/avinashrathod55252/"
           target="_blank"
           rel="noreferrer"
           className="text-blue-600 hover:text-blue-500 transform hover:scale-110 transition-all duration-300"
@@ -23,7 +24,22 @@ export default function Footer() {
           <FaLinkedin />
         </a>
         <a
+          href="https://leetcode.com/u/avirathod/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-orange-600 hover:text-orange-500 transform hover:scale-110 transition-all duration-300"
+          title="LeetCode"
+        >
+          <SiLeetcode />
+        </a>
+        <a
           href="mailto:rathodavi952@zohomail.in"
+          className="text-blue-600 hover:text-blue-500 transform hover:scale-110 transition-all duration-300"
+        >
+          <FaEnvelope />
+        </a>
+        <a
+          href="mailto:avinashrathod55252@gmail.com"
           className="text-blue-600 hover:text-blue-500 transform hover:scale-110 transition-all duration-300"
         >
           <FaEnvelope />
@@ -33,13 +49,12 @@ export default function Footer() {
       {/* Divider Line */}
       <div className="w-24 mx-auto border-t-4 border-blue-300 rounded-full mb-6"></div>
 
-      {/* Footer Text - Centered */}
+      {/* Footer Text */}
       <p className="text-center text-gray-600 text-sm leading-relaxed px-4">
         ©{" "}
         <span className="font-semibold text-blue-700">2025 Avinash Rathod</span>{" "}
         — All Rights Reserved. <br />
       </p>
-
       {/* Glow Accent */}
       <div className="mt-5">
         <div className="mx-auto w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full shadow-md"></div>

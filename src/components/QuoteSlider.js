@@ -1,68 +1,83 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function QuoteSlider() {
   const quotes = [
     {
       text: "“Excellence happens not by accident. It is a process.”",
       author: "— Dr. A.P.J. Abdul Kalam",
-      img: "https://upload.wikimedia.org/wikipedia/commons/b/b0/A.P.J._Abdul_Kalam.jpg",
+      img: process.env.PUBLIC_URL + "/apg.jpg", // ✅ from public folder
     },
     {
       text: "“Progress is often equal to the difference between mind and mindset.”",
       author: "— N.R. Narayana Murthy",
-      img: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Narayana_Murthy_in_2010.jpg",
+      img: process.env.PUBLIC_URL + "/nrn.jpg", // ✅ from public folder
     },
     {
       text: "“Wear your failure as a badge of honor.”",
       author: "— Sundar Pichai",
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Sundar_Pichai_in_2021_%28cropped%29.jpg",
+      img: process.env.PUBLIC_URL + "/sundar.avif", // ✅ from public folder
     },
     {
       text: "“Take the stones people throw at you, and use them to build a monument.”",
       author: "— Ratan Tata",
-      img: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Ratan_Tata_photo.jpg",
+      img: process.env.PUBLIC_URL + "/rt.jpg", // ✅ from public folder
     },
   ];
 
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
+  // Auto-change quotes
   useEffect(() => {
-    const timer = setInterval(
-      () => setIndex((i) => (i + 1) % quotes.length),
-      5000
-    );
-    return () => clearInterval(timer);
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % quotes.length);
+        setFade(true);
+      }, 400); // Fade out before switching
+    }, 5000);
+    return () => clearInterval(interval);
   }, [quotes.length]);
 
   return (
-    <section className="bg-gradient-to-r from-blue-50 via-white to-blue-50 text-gray-800 text-center py-16 transition-all duration-700">
-      <div className="flex flex-col items-center justify-center gap-6 px-6">
-        {/* Profile Image */}
-        <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-500">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 text-gray-800 transition-all duration-700">
+      <div className="max-w-3xl mx-auto flex flex-col items-center text-center px-6">
+        {/* ✅ Profile Picture */}
+        <div className="relative w-48 h-48 rounded-full bg-white overflow-hidden shadow-2xl border-4 border-blue-200 hover:scale-110 transition-transform duration-500">
           <img
             src={quotes[index].img}
             alt={quotes[index].author}
-            className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
 
-        {/* Quote Text */}
-        <p className="text-xl md:text-2xl italic font-medium max-w-2xl text-gray-700 leading-relaxed transition-opacity duration-700 ease-in-out">
+        {/* ✅ Quote Text */}
+        <p
+          className={`mt-10 text-2xl md:text-3xl italic font-medium text-gray-700 leading-relaxed max-w-2xl transition-opacity duration-700 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {quotes[index].text}
         </p>
 
-        {/* Author */}
-        <p className="text-sm md:text-base font-semibold text-blue-600">
+        {/* ✅ Author Name */}
+        <p
+          className={`mt-4 text-lg md:text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-opacity duration-700 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {quotes[index].author}
         </p>
 
-        {/* Dots Indicator */}
-        <div className="flex gap-2 mt-4">
+        {/* ✅ Dot Indicators */}
+        <div className="flex gap-2 mt-8">
           {quotes.map((_, i) => (
             <span
               key={i}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === index ? "bg-blue-500 scale-110" : "bg-blue-200"
+                i === index ? "bg-blue-500 scale-125" : "bg-blue-200"
               }`}
             ></span>
           ))}

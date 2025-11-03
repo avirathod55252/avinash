@@ -1,5 +1,6 @@
 import React from "react";
-import profilePic from "../img.jpeg";
+import { PhoneCall, Mail } from "lucide-react"; // ✅ Import Lucide icons
+import profilePic from "../avi.jpeg";
 
 export default function Hero() {
   return (
@@ -36,16 +37,16 @@ export default function Hero() {
               className="w-14 h-14 flex items-center justify-center bg-white text-blue-600 text-2xl rounded-full shadow-md hover:bg-blue-50 hover:shadow-xl transition transform hover:scale-110"
               title="Email Me"
             >
-              ✉️
+              <Mail className="w-6 h-6" />
             </a>
 
-            {/* Phone Button */}
+            {/* Phone Button (Green Icon) */}
             <a
               href="tel:7620790495"
-              className="w-14 h-14 flex items-center justify-center bg-white text-blue-600 text-2xl rounded-full shadow-md hover:bg-blue-50 hover:shadow-xl transition transform hover:scale-110"
+              className="w-14 h-14 flex items-center justify-center bg-white text-green-600 text-2xl rounded-full shadow-md hover:bg-green-50 hover:shadow-xl transition transform hover:scale-110"
               title="Call Me"
             >
-              📞
+              <PhoneCall className="w-6 h-6" />
             </a>
           </div>
 

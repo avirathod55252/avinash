@@ -29,5 +29,4 @@ coverage/
 # temporary files
 *.tmp
 
-# 🚫 Ignore backend folder
-/backend/
+

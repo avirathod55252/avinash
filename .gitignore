@@ -29,4 +29,8 @@ coverage/
 # temporary files
 *.tmp
 
+# Backend local env and uploads
+backend/.env
+backend/uploads/
+
 

@@ -2,14 +2,8 @@ import React, { useState, useEffect } from "react";
 
 export default function Documents() {
   const [documents, setDocuments] = useState([]);
-// <<<<<<< feat/add-leetcode-footer
-//   // Use env var in production; fall back to localhost for development
-//   const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-// =======
-  
-//   // 🔗 Use your deployed backend URL from Render
-//   const API_URL = "https://resume-backend-4-85df.onrender.com";
-// >>>>>>> main
+  // Use env var in production; fall back to localhost for development
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   // ✅ Fetch uploaded files from backend when component loads
   useEffect(() => {
@@ -21,11 +15,15 @@ export default function Documents() {
 
   // ✅ Optional: handle file deletion
   const handleDelete = async (filename) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this file?");
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this file?"
+    );
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`${API_URL}/delete/${filename}`, { method: "DELETE" });
+      const res = await fetch(`${API_URL}/delete/${filename}`, {
+        method: "DELETE",
+      });
       const data = await res.json();
       alert(data.message);
       setDocuments((prev) => prev.filter((doc) => doc.name !== filename));
@@ -36,7 +34,9 @@ export default function Documents() {
 
   return (
     <section id="documents" className="py-16 max-w-6xl mx-auto px-6">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6">📁 Uploaded Files</h2>
+      <h2 className="text-3xl font-bold text-blue-600 mb-6">
+        📁 Uploaded Files
+      </h2>
 
       {documents.length === 0 ? (
         <p className="text-gray-600">No files uploaded yet.</p>

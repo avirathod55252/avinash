@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
-// SecurityGate locked access has been disabled for public/demo usage
-// import SecurityGate from "./components/SecurityGate";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import QuoteSlider from "./components/QuoteSlider";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Achievements from "./components/Achievements";
-import Ratings from "./components/Ratings";
-import Footer from "./components/Footer";
-import Documents from "./components/Documents";
+import SecurityGate from "./components/SecurityGate.js";
+import Navbar from "./components/Navbar.js";
+import Hero from "./components/Hero.js";
+import QuoteSlider from "./components/QuoteSlider.js";
+import Skills from "./components/Skills.js";
+import Education from "./components/Education.js";
+import Experience from "./components/Experience.js";
+import Projects from "./components/Projects.js";
+import Achievements from "./components/Achievements.js";
+import Ratings from "./components/Ratings.js";
+import Footer from "./components/Footer.js";
+import Documents from "./components/Documents.js";
 
 export default function App() {
-  // Make the app public by default (skip the security gate)
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   // ✅ Check localStorage once on load + check for expiry
   useEffect(() => {
@@ -54,12 +52,10 @@ export default function App() {
     }
   };
 
-  // Security gate disabled for public/demo. If you want to re-enable it,
-  // uncomment the import above and the block below.
-  // // ✅ Show Security PIN screen first (locked)
-  // if (!authenticated) {
-  //   return <SecurityGate onUnlock={handleUnlock} />;
-  // }
+  // ✅ Show Security PIN screen first (locked)
+  if (!authenticated) {
+    return <SecurityGate onUnlock={handleUnlock} />;
+  }
 
   // ✅ Show resume content once unlocked
   return (

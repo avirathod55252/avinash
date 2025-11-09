@@ -2,9 +2,14 @@ import React, { useState, useEffect } from "react";
 
 export default function Documents() {
   const [documents, setDocuments] = useState([]);
+// <<<<<<< feat/add-leetcode-footer
+//   // Use env var in production; fall back to localhost for development
+//   const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+// =======
   
-  // 🔗 Use your deployed backend URL from Render
-  const API_URL = "https://resume-backend-4-85df.onrender.com";
+//   // 🔗 Use your deployed backend URL from Render
+//   const API_URL = "https://resume-backend-4-85df.onrender.com";
+// >>>>>>> main
 
   // ✅ Fetch uploaded files from backend when component loads
   useEffect(() => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SecurityGate from "./components/SecurityGate";
+// SecurityGate locked access has been disabled for public/demo usage
+// import SecurityGate from "./components/SecurityGate";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import QuoteSlider from "./components/QuoteSlider";
@@ -13,7 +14,8 @@ import Footer from "./components/Footer";
 import Documents from "./components/Documents";
 
 export default function App() {
-  const [authenticated, setAuthenticated] = useState(false);
+  // Make the app public by default (skip the security gate)
+  const [authenticated, setAuthenticated] = useState(true);
 
   // ✅ Check localStorage once on load + check for expiry
   useEffect(() => {
@@ -52,10 +54,12 @@ export default function App() {
     }
   };
 
-  // ✅ Show Security PIN screen first (locked)
-  if (!authenticated) {
-    return <SecurityGate onUnlock={handleUnlock} />;
-  }
+  // Security gate disabled for public/demo. If you want to re-enable it,
+  // uncomment the import above and the block below.
+  // // ✅ Show Security PIN screen first (locked)
+  // if (!authenticated) {
+  //   return <SecurityGate onUnlock={handleUnlock} />;
+  // }
 
   // ✅ Show resume content once unlocked
   return (

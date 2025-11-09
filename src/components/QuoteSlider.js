@@ -40,7 +40,7 @@ export default function QuoteSlider() {
         setIndex((prev) => (prev + 1) % quotes.length);
         setFade(true);
       }, 400); // Fade out before switching
-  }, 3000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [quotes.length]);
 

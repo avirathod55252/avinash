@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 
 export default function Documents() {
   const [documents, setDocuments] = useState([]);
-  const API_URL = "http://localhost:5000";
+  // Use env var in production; fall back to localhost for development
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
   // ✅ Fetch all files
   useEffect(() => {

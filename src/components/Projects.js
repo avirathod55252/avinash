@@ -18,7 +18,7 @@ export default function Projects() {
         "InsuraSphere is a demo full-stack insurance management app built for learning & practical demonstration.",
       ],
       tech: ["React.js", "Node.js", "Express.js", "TailwindCSS"],
-      link: "./",
+      link: "https://insura-sphere.vercel.app/",
     },
 
     {
@@ -34,7 +34,7 @@ export default function Projects() {
         "Designed for real-world scalability with a clean UI and branding kit.",
       ],
       tech: ["React.js", "Node.js", "OpenAI API", "TailwindCSS"],
-      link: "https://your-neet-ai-doctor-link.com",
+      link: "./",
     },
 
     {
@@ -50,7 +50,20 @@ export default function Projects() {
         "Invoice generation and email confirmation.",
       ],
       tech: ["React.js", "Node.js", "Express", "MongoDB", "TailwindCSS"],
-      link: "https://your-ecommerce-demo-link.com",
+      link: "./",
+    },
+    {
+      title: "Quote Vault",
+      icon: <ShoppingCart className="w-6 h-6 text-blue-600" />,
+      desc: [
+        "A modern quote browsing and management platform.",
+        "Users can explore random, trending, and category-based quotes.",
+        "Bookmark, like, and copy quotes instantly.",
+        "Clean, fast, and responsive UI for smooth browsing.",
+        "Powered by a public quotes API with optimized fetching.",
+      ],
+      tech: ["Next.js", "React.js", "TailwindCSS", "API Integration"],
+      link: "https://quote-vault-orpin.vercel.app/",
     },
   ];
 

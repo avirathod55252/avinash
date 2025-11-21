@@ -23,7 +23,7 @@ export default function Gallery() {
       caption: "Hackathon Final Round Participation",
     },
     {
-      src: "/a4.jpeg",
+      src: "/A4.jpeg",
       caption: "Appreciation Certificate from Vikrant More IDES Officer ",
     },
     {
@@ -36,18 +36,18 @@ export default function Gallery() {
   const certificates = [
     {
       src: "/a3.jpeg",
-      caption: "College Topper Award – B.Tech CSE",
+      caption: "College Topper Award - B.Tech CSE",
     },
     {
       src: "/sih.jpeg",
-      caption: "Smart India Hackathon – Institute Level Participation",
+      caption: "Smart India Hackathon -Institute Level Participation",
     },
     {
       src: "/metlife.jpeg",
       caption: "12 hour MetLife Hackathon Goodie Bag, Participation Award",
     },
     {
-      src: "/py.jpeg",
+      src: "/Pyt.jpeg",
       caption:
         "Python Warrior Winner  Certificate - Bharati Vidyapeeth Kolhapur",
     },
@@ -56,8 +56,16 @@ export default function Gallery() {
       caption: "Geeks for Geeks Technical Scripter ",
     },
     {
-      src: "/sy.jpeg",
-      caption: "Second Year Topper Award – B.Tech CSE",
+      src: "/Syy.jpg",
+      caption: "Second Year Topper Award -B.Tech CSE",
+    },
+    {
+      src: "/a6.jpeg",
+      caption: "Treasure Hunt Winner 1st Prize : Extra Curricullum ",
+    },
+    {
+      src: "/jrs.jpg",
+      caption: "Jr Software Developer : Goverment certified ",
     },
   ];
 

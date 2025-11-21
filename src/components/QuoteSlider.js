@@ -22,11 +22,6 @@ export default function QuoteSlider() {
       author: "— Ratan Tata",
       img: process.env.PUBLIC_URL + "/rt.jpg", // ✅ from public folder
     },
-    {
-      text: "“Technology is best when it brings people together.”",
-      author: "— Matt Mullenweg",
-      img: process.env.PUBLIC_URL + "/sundar.avif", // reuse existing image
-    },
   ];
 
   const [index, setIndex] = useState(0);

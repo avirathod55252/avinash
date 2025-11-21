@@ -8,6 +8,7 @@ import {
   Award,
   Menu,
   X,
+  Images,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -19,20 +20,25 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
       const sections = document.querySelectorAll("section[id]");
       let current = "home";
+
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 80;
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute("id");
         }
       });
+
       setActive(current);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ⭐ Updated navLinks including GALLERY
   const navLinks = [
     { id: "home", label: "Home", icon: <Home className="w-4 h-4" /> },
     { id: "skills", label: "Skills", icon: <Code className="w-4 h-4" /> },
@@ -51,6 +57,10 @@ export default function Navbar() {
       label: "Projects",
       icon: <FolderGit2 className="w-4 h-4" />,
     },
+
+    // ⭐ Added Gallery Link
+    { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
+
     {
       id: "achievements",
       label: "Achievements",

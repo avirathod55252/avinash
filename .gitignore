@@ -33,4 +33,5 @@ coverage/
 backend/.env
 backend/uploads/
 
-
+# Ignore entire backend folder
+/backend

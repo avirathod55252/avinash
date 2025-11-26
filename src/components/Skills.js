@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaComments,
 } from "react-icons/fa";
-import { SiJavascript, SiPowerbi } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
 import { GiNetworkBars } from "react-icons/gi";
 import { motion } from "framer-motion";
 
@@ -38,9 +38,8 @@ export default function Skills() {
     },
     {
       name: "Git & GitHub",
-      icon: <FaGithub className="text-gray-800 text-4xl" />,
+      icon: <FaGithub className="text-gray-800 dark:text-gray-200 text-4xl" />,
     },
-
     {
       name: "Communication Skills",
       icon: <FaComments className="text-pink-500 text-4xl" />,
@@ -50,12 +49,12 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50"
+      className="py-16 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-blue-700 mb-12 relative inline-block">
+        <h2 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-12 relative inline-block">
           Technical Skills
-          <div className="h-1 w-32 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+          <div className="h-1 w-32 bg-blue-500 dark:bg-blue-400 mx-auto mt-2 rounded-full"></div>
         </h2>
 
         {/* Skills Grid */}
@@ -67,10 +66,10 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white shadow-md hover:shadow-xl rounded-2xl p-6 flex flex-col items-center justify-center gap-3 border border-blue-100 hover:-translate-y-1 transition-all duration-300"
+              className="bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-700 hover:shadow-xl rounded-2xl p-6 flex flex-col items-center justify-center gap-3 border border-blue-100 dark:border-gray-700 hover:-translate-y-1 transition-all duration-300"
             >
               {skill.icon}
-              <p className="text-lg font-semibold text-gray-700">
+              <p className="text-lg font-semibold text-gray-700 dark:text-gray-100">
                 {skill.name}
               </p>
             </motion.div>

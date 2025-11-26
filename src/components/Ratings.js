@@ -33,9 +33,9 @@ export default function Ratings() {
   return (
     <section
       id="ratings"
-      className="py-16 bg-gradient-to-br from-blue-50 via-white to-blue-100 max-w-6xl mx-auto px-6 rounded-2xl shadow-lg"
+      className="py-16 bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 max-w-6xl mx-auto px-6 rounded-2xl shadow-lg transition-colors duration-500"
     >
-      <h2 className="text-4xl font-extrabold text-center text-blue-700 mb-10 tracking-wide">
+      <h2 className="text-4xl font-extrabold text-center text-blue-700 dark:text-blue-400 mb-10 tracking-wide">
         Skill Rating
       </h2>
 
@@ -43,24 +43,24 @@ export default function Ratings() {
         {ratings.map((item, i) => (
           <div
             key={i}
-            className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+            className="bg-white/80 dark:bg-gray-800/70 backdrop-blur-sm p-6 rounded-xl shadow-md dark:shadow-gray-700 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-3">
                 {item.icon}
-                <span className="font-semibold text-gray-800 text-lg">
+                <span className="font-semibold text-gray-800 dark:text-gray-100 text-lg">
                   {item.skill}
                 </span>
               </div>
-              <span className="text-sm font-medium text-gray-600">
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 {item.level}%
               </span>
             </div>
 
             {/* Progress bar */}
-            <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
               <div
-                className="bg-gradient-to-r from-blue-500 to-blue-700 h-3 rounded-full transition-all duration-700 ease-out"
+                className="bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600 h-3 rounded-full transition-all duration-700 ease-out"
                 style={{ width: `${item.level}%` }}
               ></div>
             </div>

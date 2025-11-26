@@ -7,7 +7,7 @@ export default function Gallery() {
     {
       src: "/avi2.jpeg",
       caption:
-        "AI Seminar Participation – Regional Training Center, Khadakwasla Pune",
+        "AI Seminar Participation – Regional Training Center, Khadki Pune",
     },
     {
       src: "/avi3.jpeg",
@@ -20,15 +20,15 @@ export default function Gallery() {
     },
     {
       src: "/a1.jpeg",
-      caption: "Hackathon Final Round Participation",
+      caption: "Hackathon Coding Challenge At Pune - Participation",
     },
     {
       src: "/A4.jpeg",
-      caption: "Appreciation Certificate from Vikrant More IDES Officer ",
+      caption: "Appreciation Certificate from Vikrant More (IDES Officer)",
     },
     {
       src: "/a5.jpeg",
-      caption: "Ahilyanagar Cantonemnt Team : Har Ghar Tiranga",
+      caption: "Ahilyanagar Cantonment Team: Har Ghar Tiranga",
     },
   ];
 
@@ -40,39 +40,39 @@ export default function Gallery() {
     },
     {
       src: "/sih.jpeg",
-      caption: "Smart India Hackathon -Institute Level Participation",
+      caption: "Smart India Hackathon - Institute Level Participation",
     },
     {
       src: "/metlife.jpeg",
-      caption: "12 hour MetLife Hackathon Goodie Bag, Participation Award",
+      caption: "12 Hour MetLife Hackathon Goodie Bag & Participation Award",
     },
     {
       src: "/Pyt.jpeg",
       caption:
-        "Python Warrior Winner  Certificate - Bharati Vidyapeeth Kolhapur",
+        "Python Warrior Winner Certificate - Bharati Vidyapeeth Kolhapur",
     },
     {
       src: "/gfg.jpeg",
-      caption: "Geeks for Geeks Technical Scripter ",
+      caption: "Geeks for Geeks Technical Scripter",
     },
     {
       src: "/Syy.jpg",
-      caption: "Second Year Topper Award -B.Tech CSE",
+      caption: "Second Year Topper Award - B.Tech CSE",
     },
     {
       src: "/a6.jpeg",
-      caption: "Treasure Hunt Winner 1st Prize : Extra Curricullum ",
+      caption: "Treasure Hunt Winner – 1st Prize (Extra Curriculum)",
     },
     {
       src: "/jrs.jpg",
-      caption: "Jr Software Developer : Goverment certified ",
+      caption: "Junior Software Developer – Government Certified",
     },
   ];
 
-  // Lightbox Image State
+  // Lightbox State
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // ------------------ IMAGE GRID COMPONENT ------------------
+  // ------------------ IMAGE GRID FUNCTION ------------------
   const renderGrid = (list) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
       {list.map((img, index) => (
@@ -81,21 +81,21 @@ export default function Gallery() {
           onClick={() => setSelectedImage(img)}
           className="cursor-pointer group"
         >
-          <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-gray-800 transition-all">
             <img
               src={img.src}
-              alt="achievement"
+              alt={img.caption}
               className="object-cover w-full h-56 group-hover:scale-105 transition-transform duration-300"
             />
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+            <div className="absolute inset-0 bg-black/30 dark:bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
               <span className="text-white text-lg font-semibold">View</span>
             </div>
           </div>
 
           {/* Caption */}
-          <p className="mt-3 text-center text-gray-700 font-medium">
+          <p className="mt-3 text-center text-gray-700 dark:text-gray-300 font-medium">
             {img.caption}
           </p>
         </div>
@@ -104,43 +104,50 @@ export default function Gallery() {
   );
 
   return (
-    <div className="py-20 px-6 md:px-12 bg-gray-50" id="gallery">
+    <section
+      id="gallery"
+      className="py-20 px-6 md:px-12 bg-gray-50 dark:bg-gray-900 transition-colors"
+    >
       {/* ------------------ SECTION 1: ACHIEVEMENTS ------------------ */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-900">
-          My <span className="text-blue-600">Achievements</span>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+          My{" "}
+          <span className="text-blue-600 dark:text-blue-400">Achievements</span>
         </h2>
-        <p className="mt-2 text-gray-600 text-lg">
+        <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg">
           Events, seminars, celebrations, and special moments from my journey.
         </p>
       </div>
 
       {renderGrid(achievements)}
 
-      {/* ------------------ GAP ------------------ */}
+      {/* Space */}
       <div className="h-20"></div>
 
       {/* ------------------ SECTION 2: CERTIFICATES ------------------ */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-gray-900">
-          My <span className="text-green-600">Certificates</span>
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+          My{" "}
+          <span className="text-green-600 dark:text-green-400">
+            Certificates
+          </span>
         </h2>
-        <p className="mt-2 text-gray-600 text-lg">
+        <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg">
           Awards, recognitions, academic and professional certifications.
         </p>
       </div>
 
       {renderGrid(certificates)}
 
-      {/* ------------------ LIGHTBOX MODAL ------------------ */}
+      {/* ------------------ LIGHTBOX ------------------ */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-xl w-full">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 max-w-xl w-full transition">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 p-2 rounded-full shadow"
+              className="absolute top-3 right-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-2 rounded-full shadow transition"
             >
-              <X size={22} />
+              <X size={22} className="text-gray-800 dark:text-gray-200" />
             </button>
 
             <img
@@ -149,12 +156,12 @@ export default function Gallery() {
               className="rounded-lg mb-4 max-h-[70vh] mx-auto"
             />
 
-            <p className="text-center text-gray-700 font-semibold text-lg">
+            <p className="text-center text-gray-700 dark:text-gray-300 font-semibold text-lg">
               {selectedImage.caption}
             </p>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }

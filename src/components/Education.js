@@ -29,13 +29,13 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
+      className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Title */}
-        <h2 className="text-4xl font-bold text-blue-700 mb-10 text-center relative">
+        <h2 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center relative">
           Education
-          <div className="h-1 w-32 bg-blue-500 mx-auto mt-3 rounded-full"></div>
+          <div className="h-1 w-32 bg-blue-500 dark:bg-blue-400 mx-auto mt-3 rounded-full"></div>
         </h2>
 
         {/* Education Cards */}
@@ -43,14 +43,16 @@ export default function Education() {
           {education.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-blue-100 hover:-translate-y-1 flex flex-col items-center text-center"
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-blue-100 dark:border-gray-700 hover:-translate-y-1 flex flex-col items-center text-center"
             >
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
                 {item.degree}
               </h3>
-              <p className="text-gray-600 font-medium">{item.institution}</p>
-              <p className="text-sm text-blue-600 mt-2 font-semibold">
+              <p className="text-gray-600 dark:text-gray-300 font-medium">
+                {item.institution}
+              </p>
+              <p className="text-sm text-blue-600 dark:text-blue-400 mt-2 font-semibold">
                 {item.score} • {item.year}
               </p>
             </div>

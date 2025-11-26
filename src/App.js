@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-// import SecurityGate from "./components/SecurityGate.js";
+import React from "react";
+import ThemeWrapper from "./components/ThemeWrapper";
 import Navbar from "./components/Navbar.js";
 import Hero from "./components/Hero.js";
 import QuoteSlider from "./components/QuoteSlider.js";
@@ -14,7 +14,7 @@ import Gallery from "./components/Gallery.js";
 
 export default function App() {
   return (
-    <div className="font-sans bg-gray-50 text-gray-800">
+    <ThemeWrapper>
       <Navbar />
       <Hero />
       <QuoteSlider />
@@ -26,6 +26,6 @@ export default function App() {
       <Gallery />
       <Ratings />
       <Footer />
-    </div>
+    </ThemeWrapper>
   );
 }

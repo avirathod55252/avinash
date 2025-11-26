@@ -16,7 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("home");
 
-  // Detect scroll position for active link + blur/shadow
+  // Scroll tracking + active section highlight
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -38,7 +38,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ⭐ Updated navLinks including GALLERY
   const navLinks = [
     { id: "home", label: "Home", icon: <Home className="w-4 h-4" /> },
     { id: "skills", label: "Skills", icon: <Code className="w-4 h-4" /> },
@@ -57,10 +56,7 @@ export default function Navbar() {
       label: "Projects",
       icon: <FolderGit2 className="w-4 h-4" />,
     },
-
-    // ⭐ Added Gallery Link
     { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
-
     {
       id: "achievements",
       label: "Achievements",
@@ -72,31 +68,32 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-lg border-b border-blue-100"
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg border-b border-blue-100 dark:border-gray-700"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
-        {/* Logo / Name */}
-        <h1 className="text-2xl font-extrabold text-blue-700 tracking-tight hover:scale-105 transition-transform duration-200 cursor-pointer">
+        <h1 className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight hover:scale-105 transition-transform cursor-pointer">
           Avinash Rathod
         </h1>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-700 dark:text-gray-300">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
               className={`flex items-center gap-1 relative transition-all group ${
-                active === link.id ? "text-blue-600" : "hover:text-blue-500"
+                active === link.id
+                  ? "text-blue-600 dark:text-blue-400"
+                  : "hover:text-blue-500 dark:hover:text-blue-300"
               }`}
             >
               <span
                 className={`absolute left-0 -bottom-1 h-[2px] rounded-full transition-all duration-300 ${
                   active === link.id
-                    ? "w-full bg-blue-600"
-                    : "w-0 bg-blue-400 group-hover:w-full"
+                    ? "w-full bg-blue-600 dark:bg-blue-400"
+                    : "w-0 bg-blue-400 dark:bg-blue-300 group-hover:w-full"
                 }`}
               ></span>
               {link.icon}
@@ -105,28 +102,28 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 rounded-md text-blue-700 hover:bg-blue-100 transition"
+          className="md:hidden p-2 rounded-md text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-gray-800 transition"
         >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu Dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-blue-100 shadow-md animate-slideDown">
+        <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-blue-100 dark:border-gray-700 shadow-md animate-slideDown">
           <ul className="flex flex-col text-center space-y-3 py-4 font-medium">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
                   href={`#${link.id}`}
                   onClick={() => setMenuOpen(false)}
-                  className={`flex items-center justify-center gap-2 py-2 transition-all ${
+                  className={`flex items-center justify-center gap-2 py-2 transition ${
                     active === link.id
-                      ? "text-blue-600 font-semibold"
-                      : "text-gray-700 hover:text-blue-600"
+                      ? "text-blue-600 dark:text-blue-400 font-semibold"
+                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                   }`}
                 >
                   {link.icon}

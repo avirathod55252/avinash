@@ -16,3 +16,12 @@ body {
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@keyframes waveAnimation {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-wave {
+  animation: waveAnimation 10s linear infinite;
+}

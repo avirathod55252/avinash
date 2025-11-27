@@ -111,8 +111,7 @@ export default function Gallery() {
       {/* ------------------ SECTION 1: ACHIEVEMENTS ------------------ */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          My{" "}
-          <span className="text-blue-600 dark:text-blue-400">Achievements</span>
+          Gallery <span className="text-blue-600 dark:text-blue-400">I</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg">
           Events, seminars, celebrations, and special moments from my journey.
@@ -127,10 +126,7 @@ export default function Gallery() {
       {/* ------------------ SECTION 2: CERTIFICATES ------------------ */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          My{" "}
-          <span className="text-green-600 dark:text-green-400">
-            Certificates
-          </span>
+          Gallery <span className="text-green-600 dark:text-green-400">II</span>
         </h2>
         <p className="mt-2 text-gray-600 dark:text-gray-400 text-lg">
           Awards, recognitions, academic and professional certifications.

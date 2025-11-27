@@ -4,12 +4,16 @@ import { ShoppingCart, BrainCircuit, ShieldCheck } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "InsuraSphere -  Full Stack Insurance Management System",
+      title: "InsuraSphere - Full Stack Insurance Management System",
       icon: (
-        <ShieldCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+        <img
+          src="/is.png"
+          alt="InsuraSphere Logo"
+          className="w-10 h-10 object-contain drop-shadow-lg"
+        />
       ),
       desc: [
-        "Full-stack insurance management platform for Life, Health & Vehicle , Cyber Attack , Pet , Travel,  etc policies.",
+        "Full-stack insurance management platform for Life, Health & Vehicle, Cyber Attack, Pet, Travel, etc. policies.",
         "Allows users to browse, compare, and purchase insurance policies.",
         "Includes secure role-based authentication and protected routes.",
         "Dynamic premium calculator for instant policy quotations.",

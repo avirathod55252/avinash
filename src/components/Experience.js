@@ -37,7 +37,7 @@ export default function Experience() {
     <section
       id="experience"
       className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 
-      dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
+        dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
@@ -56,8 +56,8 @@ export default function Experience() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl dark:shadow-gray-700 
-              hover:shadow-2xl border border-blue-100 dark:border-gray-700 p-8 
-              transition-all duration-300 hover:-translate-y-1"
+                hover:shadow-2xl border border-blue-100 dark:border-gray-700 p-8 
+                transition-all duration-300 hover:-translate-y-1"
             >
               {/* --- TOP ROW — LOGO / ROLE / BADGE --- */}
               <div className="flex justify-between items-center mb-6">
@@ -67,8 +67,8 @@ export default function Experience() {
                   {exp.logo && (
                     <div
                       className="w-20 h-20 bg-white dark:bg-gray-800 border border-gray-200 
-                      dark:border-gray-700 rounded-xl shadow-md flex items-center justify-center p-1
-                      hover:scale-105 transition"
+                        dark:border-gray-700 rounded-xl shadow-md flex items-center justify-center p-1
+                        hover:scale-105 transition"
                     >
                       <img
                         src={exp.logo}
@@ -93,8 +93,8 @@ export default function Experience() {
                 {exp.badge && (
                   <div
                     className="w-20 h-20 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
-                    rounded-xl shadow-lg flex items-center justify-center p-3
-                    hover:scale-110 transition duration-300"
+                      rounded-xl shadow-lg flex items-center justify-center p-3
+                      hover:scale-110 transition duration-300"
                   >
                     <img
                       src={exp.badge}
@@ -112,8 +112,8 @@ export default function Experience() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-purple-600 dark:text-purple-400 
-                  hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
-                  transition-all duration-200 mb-3 inline-block"
+                    hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
+                    transition-all duration-200 mb-3 inline-block"
                 >
                   {exp.company}
                 </a>

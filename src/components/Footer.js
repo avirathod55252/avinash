@@ -1,118 +1,104 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode, SiGmail } from "react-icons/si";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 pt-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-950 border-t border-blue-200 dark:border-gray-700 shadow-inner overflow-hidden">
-      {/* 🌊 Animated Wave (Top) */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
+    <footer
+      id="footer"
+      className="relative mt-16 bg-blue-600 dark:bg-gray-900 text-white pt-16"
+    >
+      {/* 🌊 Animated Waves */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
         <svg
-          className="relative block w-[200%] h-[120px] animate-wave"
-          xmlns="http://www.w3.org/2000/svg"
+          className="relative block w-[200%] h-24 animate-wave-slow"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
           <path
-            d="M985.66 92.83C906.67 72 823.78 31.17 743.84 14.77 661.59 -2.57 574.56 4.44 492.32 27.46 426.72 46.07 363.4 78.12 297.8 95.74 233.07 113.12 167.72 116.39 103.55 102.88 65.96 94.66 33.31 81.89 0 68.62V0H1200V27.35C1128.2 59.3 1055.45 113.83 985.66 92.83Z"
-            fill="url(#waveGradient)"
-          ></path>
-          <defs>
-            <linearGradient id="waveGradient" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stopColor="#3b82f6" />
-              <stop offset="50%" stopColor="#60a5fa" />
-              <stop offset="100%" stopColor="#93c5fd" />
-            </linearGradient>
-          </defs>
+            d="M321.39 56.44C198.43 34.5 94.19 62 0 90.11V120h1200V0c-47.79 22.13-103.59 39.9-158.59 41.72-70.13 2.31-136.07-21.71-206.71-37.37C721.13-8.9 655.22 5.67 585.77 27.64c-76.09 24.18-152 48.36-232.77 28.8z"
+            fill="white"
+            fillOpacity="0.25"
+          />
+        </svg>
+
+        <svg
+          className="absolute block w-[200%] h-24 animate-wave-slow-reverse bottom-0"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39 56.44C198.43 34.5 94.19 62 0 90.11V120h1200V0c-47.79 22.13-103.59 39.9-158.59 41.72-70.13 2.31-136.07-21.71-206.71-37.37C721.13-8.9 655.22 5.67 585.77 27.64c-76.09 24.18-152 48.36-232.77 28.8z"
+            fill="white"
+            fillOpacity="0.15"
+          />
         </svg>
       </div>
 
-      {/* 💡 Background Glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-300 opacity-20 blur-3xl rounded-full dark:bg-blue-700"></div>
-      </div>
-
-      {/* 🎯 Content Section */}
-      <div className="relative z-10">
-        {/* Social Icons */}
-        <div className="flex flex-wrap justify-center gap-12 text-4xl mb-10">
-          {/* GitHub */}
+      {/* Main Footer Content */}
+      <div className="relative z-10 container mx-auto text-center pb-10">
+        {/* 🔗 Social Icons */}
+        <div className="flex justify-center gap-6 mb-6">
           <a
             href="https://github.com/avirathod55252"
             target="_blank"
-            rel="noreferrer"
-            className="group text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-all transform hover:scale-110"
+            className="hover:scale-110 transition"
           >
-            <FaGithub className="drop-shadow-md group-hover:drop-shadow-xl transition-all" />
+            <Github size={26} />
           </a>
 
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/avinashrathod55252/"
             target="_blank"
-            rel="noreferrer"
-            className="group text-blue-700 dark:text-blue-400 hover:text-blue-500 transition-all transform hover:scale-110"
+            className="hover:scale-110 transition"
           >
-            <FaLinkedin className="drop-shadow-md group-hover:drop-shadow-xl transition-all" />
+            <Linkedin size={26} />
           </a>
 
-          {/* LeetCode */}
           <a
-            href="https://leetcode.com/u/avirathod/"
+            href="https://wa.me/7620790495"
             target="_blank"
-            rel="noreferrer"
-            className="group text-orange-600 dark:text-orange-300 hover:text-orange-500 transition-all transform hover:scale-110"
+            className="hover:scale-110 transition"
           >
-            <SiLeetcode className="drop-shadow-md group-hover:drop-shadow-xl transition-all" />
+            <MessageCircle size={26} />
           </a>
 
-          {/* Zoho Mail */}
-          <div className="flex flex-col items-center group">
-            <a
-              href="mailto:rathodavi952@zohomail.in"
-              className="text-red-600 dark:text-red-400 hover:text-red-500 transform hover:scale-110 transition-all"
-              title="Zoho Mail"
-            >
-              <SiGmail className="drop-shadow-md group-hover:drop-shadow-xl transition-all" />
-            </a>
-            <span className="text-xs mt-1 font-medium text-red-600 dark:text-red-400 opacity-90 group-hover:opacity-100 transition">
-              Zoho
-            </span>
-          </div>
-
-          {/* Gmail */}
-          <div className="flex flex-col items-center group">
-            <a
-              href="mailto:avinashrathod55252@gmail.com"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-500 transform hover:scale-110 transition-all"
-              title="Gmail"
-            >
-              <SiGmail className="drop-shadow-md group-hover:drop-shadow-xl transition-all" />
-            </a>
-            <span className="text-xs mt-1 font-medium text-blue-600 dark:text-blue-400 opacity-90 group-hover:opacity-100 transition">
-              Gmail
-            </span>
-          </div>
+          <a
+            href="mailto:avinashrathod55252@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition cursor-pointer z-[20] relative"
+          >
+            <Mail size={26} />
+          </a>
         </div>
 
-        {/* Divider */}
-        <div className="relative flex justify-center mb-8">
-          <div className="w-32 h-[3px] bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 rounded-full shadow-lg"></div>
+        {/* 📁 Quick Links Section */}
+        <div className="mt-4 space-y-3">
+          <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+
+          {/* ⭐ New Premium Resume Button */}
+          <a
+            href="/resume.pdf"
+            download
+            className="
+    inline-block px-6 py-2 
+    font-semibold 
+    rounded-full 
+    bg-[#1f1f1f] text-white
+    shadow-[0_0_12px_rgba(0,0,0,0.55)]
+    hover:shadow-[0_0_22px_rgba(0,0,0,0.9)]
+    hover:scale-105
+    transition-all duration-300
+    border border-gray-700
+  "
+          >
+            ⬇ Download Resume
+          </a>
         </div>
 
-        {/* Footer Text */}
-        <p className="text-center text-gray-700 dark:text-gray-300 text-sm md:text-base">
-          ©{" "}
-          <span className="font-semibold text-blue-700 dark:text-blue-400">
-            2025 Avinash Rathod
-          </span>{" "}
-          — All Rights Reserved.
+        {/* Copyright */}
+        <p className="mt-6 text-white/80 text-sm">
+          © {new Date().getFullYear()} Avinash Rathod. All Rights Reserved.
         </p>
-
-        {/* Bottom Glow */}
-        <div className="mt-6 flex justify-center">
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 dark:from-blue-400 dark:to-blue-600 rounded-full shadow-lg"></div>
-        </div>
       </div>
     </footer>
   );

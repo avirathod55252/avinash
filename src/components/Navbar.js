@@ -9,6 +9,7 @@ import {
   Menu,
   X,
   Images,
+  PhoneCall,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -21,7 +22,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = document.querySelectorAll("section[id]");
+      const sections = document.querySelectorAll("section[id], footer[id]");
       let current = "home";
 
       sections.forEach((section) => {
@@ -56,11 +57,19 @@ export default function Navbar() {
       label: "Projects",
       icon: <FolderGit2 className="w-4 h-4" />,
     },
-    { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
     {
       id: "achievements",
       label: "Achievements",
       icon: <Award className="w-4 h-4" />,
+    },
+    { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
+
+    // ⭐ NEW PROFESSIONAL ITEM
+    {
+      id: "reachme",
+      label: "Reach Me",
+      icon: <PhoneCall className="w-4 h-4" />,
+      href: "#footer",
     },
   ];
 
@@ -82,7 +91,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.id}
-              href={`#${link.id}`}
+              href={link.href ? link.href : `#${link.id}`}
               className={`flex items-center gap-1 relative transition-all group ${
                 active === link.id
                   ? "text-blue-600 dark:text-blue-400"
@@ -102,7 +111,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-md text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-gray-800 transition"
@@ -111,14 +120,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-blue-100 dark:border-gray-700 shadow-md animate-slideDown">
           <ul className="flex flex-col text-center space-y-3 py-4 font-medium">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  href={`#${link.id}`}
+                  href={link.href ? link.href : `#${link.id}`}
                   onClick={() => setMenuOpen(false)}
                   className={`flex items-center justify-center gap-2 py-2 transition ${
                     active === link.id

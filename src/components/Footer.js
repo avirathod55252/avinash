@@ -1,4 +1,13 @@
-import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import {
+  CodeSquareIcon,
+  Github,
+  Linkedin,
+  Mail,
+  SquareCode,
+  SquareCodeIcon,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { SiCodingame } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -58,7 +67,7 @@ export default function Footer() {
             target="_blank"
             className="hover:scale-110 transition"
           >
-            <MessageCircle size={26} />
+            <FaWhatsapp size={26} />
           </a>
 
           <a
@@ -68,6 +77,14 @@ export default function Footer() {
             className="hover:scale-110 transition cursor-pointer z-[20] relative"
           >
             <Mail size={26} />
+          </a>
+          <a
+            href="https://leetcode.com/u/avirathod/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition cursor-pointer z-[20] relative"
+          >
+            <CodeSquareIcon size={26} />
           </a>
         </div>
 
@@ -80,8 +97,8 @@ export default function Footer() {
             href="/resume.pdf"
             download
             className="
-    inline-block px-6 py-2 
-    font-semibold 
+                  inline-block px-6 py-2 
+            font-semibold 
     rounded-full 
     bg-[#1f1f1f] text-white
     shadow-[0_0_12px_rgba(0,0,0,0.55)]

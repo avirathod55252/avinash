@@ -24,7 +24,8 @@ export default function Gallery() {
     },
     {
       src: "/A4.jpeg",
-      caption: "Appreciation Certificate from Vikrant More (IDES Officer)",
+      caption:
+        "Appreciation Certificate from CEO Vikrant More Sir (IDES Officer)",
     },
     {
       src: "/a5.jpeg",

@@ -52,6 +52,11 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-gray-500 dark:text-gray-400 text-sm">
+            I Previosly worked as Computer Programmer at Ahilyanagar Cantonemnt
+            Board. Where I Gained 1 Year and 1 Month Professional Experience in
+            Development and Maintaining Various Government web Systems
+          </p>
+          <p className="mt-6 text-gray-500 dark:text-gray-400 text-sm">
             Passionate about creating interactive, accessible, and modern web
             experiences.
           </p>

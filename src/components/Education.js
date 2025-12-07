@@ -9,7 +9,7 @@ export default function Education() {
         <img
           src="/dyp-logo.png"
           alt="DYP Logo"
-          className="w-20 h-25 object-contain drop-shadow-lg"
+          className="w-20 h-25 object-contain drop-shadow-lg "
         />
       ),
       degree: "B.Tech in Computer Science and Engineering",

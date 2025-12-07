@@ -33,11 +33,11 @@ export default function Skills() {
       icon: <GiNetworkBars className="text-green-500 text-4xl" />,
     },
     {
-      name: "OOP Principles & Design Patterns",
+      name: "OOP Principles In Java",
       icon: <FaJava className="text-indigo-500 text-4xl" />,
     },
     {
-      name: "Git & GitHub",
+      name: " GitHub",
       icon: <FaGithub className="text-gray-800 dark:text-gray-200 text-4xl" />,
     },
     {

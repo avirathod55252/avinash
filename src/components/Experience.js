@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
-      role: "Computer Programmer (Contract)",
-      company: "Ahilyanagar Cantonment Board",
+      role: "Computer Programmer 1 Year and 1 Month of Experience",
+      company: "Ahilyanagar Cantonment Board ",
       companyUrl: "https://ahmednagar.cantt.gov.in/",
-      duration: "Jul 2024 – Aug 2025",
+      duration: "22 July 2024 To  31 August 2025",
       logo: "/acbc.png",
       badge: "/em.png",
       points: [
@@ -25,10 +25,15 @@ export default function Experience() {
       role: "Technical Content Writer",
       company: "GeeksforGeeks (Remote)",
       duration: "Apr 2023 – Apr 2024",
-      logo: "/gfg1.png",
+      logo: "/gfg2.png",
       points: [
         "Published and improved 100+ technical articles.",
         "Secured 12th rank in Technical Scripter 2022.",
+        "Received 4.9/5 average rating from readers.",
+        "Specialized in web development, programming languages, and data structures.",
+        "Collaborated with editors to ensure high-quality content.",
+        "Engaged with the GFG community through comments and feedback.",
+        "Also Trained New Content Writers and Reviewed their Articles for Quality Assurance.",
       ],
     },
   ];
@@ -63,19 +68,14 @@ export default function Experience() {
               <div className="flex justify-between items-center mb-6">
                 {/* Logo + Role */}
                 <div className="flex items-center gap-5">
-                  {/* Company Logo */}
+                  {/* Company Logo - No Outer Box */}
                   {exp.logo && (
-                    <div
-                      className="w-20 h-20 bg-white dark:bg-gray-800 border border-gray-200 
-                        dark:border-gray-700 rounded-xl shadow-md flex items-center justify-center p-1
-                        hover:scale-105 transition"
-                    >
-                      <img
-                        src={exp.logo}
-                        alt="Company Logo"
-                        className="w-[95%] h-[95%] object-contain"
-                      />
-                    </div>
+                    <img
+                      src={exp.logo}
+                      alt="Company Logo"
+                      className="w-18 h-20 object-contain"
+                      style={{ imageRendering: "crisp-edges" }}
+                    />
                   )}
 
                   {/* Role + Duration */}
@@ -89,19 +89,14 @@ export default function Experience() {
                   </div>
                 </div>
 
-                {/* Badge — aligned right of role */}
+                {/* Badge - No Outer Box */}
                 {exp.badge && (
-                  <div
-                    className="w-20 h-20 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
-                      rounded-xl shadow-lg flex items-center justify-center p-3
-                      hover:scale-110 transition duration-300"
-                  >
-                    <img
-                      src={exp.badge}
-                      alt="Badge"
-                      className="object-contain"
-                    />
-                  </div>
+                  <img
+                    src={exp.badge}
+                    alt="Badge"
+                    className="w-28 h-28 object-contain hover:scale-110 transition duration-300"
+                    style={{ imageRendering: "crisp-edges" }}
+                  />
                 )}
               </div>
 
@@ -123,7 +118,7 @@ export default function Experience() {
                 </h4>
               )}
 
-              {/* --- Points List --- */}
+              {/* --- Points List */}
               <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
                 {exp.points.map((point, i) => (
                   <li

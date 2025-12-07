@@ -7,7 +7,7 @@ export default function Experience() {
       role: "Computer Programmer 1 Year and 1 Month of Experience",
       company: "Ahilyanagar Cantonment Board ",
       companyUrl: "https://ahmednagar.cantt.gov.in/",
-      duration: "22 July 2024 To  31 August 2025",
+      duration: "22 July 2024 To 31 August 2025",
       logo: "/acbc.png",
       badge: "/em.png",
       points: [
@@ -44,7 +44,7 @@ export default function Experience() {
       className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 
         dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-blue-700 dark:text-blue-400 mb-10 text-center">
           Experience
@@ -60,27 +60,27 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl dark:shadow-gray-700 
-                hover:shadow-2xl border border-blue-100 dark:border-gray-700 p-8 
-                transition-all duration-300 hover:-translate-y-1"
+              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl 
+                dark:shadow-gray-700 hover:shadow-2xl border border-blue-100 
+                dark:border-gray-700 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* --- TOP ROW — LOGO / ROLE / BADGE --- */}
-              <div className="flex justify-between items-center mb-6">
+              {/* --- TOP ROW (Fixed Responsive) --- */}
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 mb-6">
                 {/* Logo + Role */}
-                <div className="flex items-center gap-5">
-                  {/* Company Logo - No Outer Box */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                  {/* Company Logo */}
                   {exp.logo && (
                     <img
                       src={exp.logo}
                       alt="Company Logo"
-                      className="w-18 h-20 object-contain"
-                      style={{ imageRendering: "crisp-edges" }}
+                      className="w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 
+                        object-contain mx-auto sm:mx-0"
                     />
                   )}
 
                   {/* Role + Duration */}
                   <div>
-                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-100">
                       {exp.role}
                     </h3>
                     <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mt-1">
@@ -89,18 +89,18 @@ export default function Experience() {
                   </div>
                 </div>
 
-                {/* Badge - No Outer Box */}
+                {/* Badge */}
                 {exp.badge && (
                   <img
                     src={exp.badge}
                     alt="Badge"
-                    className="w-28 h-28 object-contain hover:scale-110 transition duration-300"
-                    style={{ imageRendering: "crisp-edges" }}
+                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 
+                      object-contain mx-auto md:mx-0 hover:scale-105 transition duration-300"
                   />
                 )}
               </div>
 
-              {/* --- Company Name (Linked) --- */}
+              {/* Company Name */}
               {exp.companyUrl ? (
                 <a
                   href={exp.companyUrl}
@@ -108,18 +108,21 @@ export default function Experience() {
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-purple-600 dark:text-purple-400 
                     hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
-                    transition-all duration-200 mb-3 inline-block"
+                    transition-all duration-200 mb-3 inline-block text-center sm:text-left"
                 >
                   {exp.company}
                 </a>
               ) : (
-                <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">
+                <h4 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3 text-center sm:text-left">
                   {exp.company}
                 </h4>
               )}
 
-              {/* --- Points List */}
-              <ul className="list-disc ml-6 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              {/* Points List */}
+              <ul
+                className="list-disc ml-5 sm:ml-6 text-gray-700 dark:text-gray-300 
+                space-y-2 leading-relaxed text-left"
+              >
                 {exp.points.map((point, i) => (
                   <li
                     key={i}

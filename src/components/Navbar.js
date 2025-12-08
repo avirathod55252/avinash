@@ -63,8 +63,6 @@ export default function Navbar() {
       icon: <Award className="w-4 h-4" />,
     },
     { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
-
-    // ⭐ NEW PROFESSIONAL ITEM
     {
       id: "reachme",
       label: "Reach Me",
@@ -81,10 +79,18 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
-        <h1 className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight hover:scale-105 transition-transform cursor-pointer">
-          Avinash Rathod
-        </h1>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        {/* ✅ LOGO + BRAND */}
+        <a href="#home" className="flex items-center gap-2 group">
+          <img
+            src="/arnew.png"
+            alt="Avinash Rathod Logo"
+            className="w-10 h-10 rounded-full object-contain shadow-lg group-hover:scale-110 transition duration-300"
+          />
+          <span className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight group-hover:text-blue-500 transition">
+            Avinash Rathod
+          </span>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 font-medium text-gray-700 dark:text-gray-300">
@@ -111,7 +117,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-md text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-gray-800 transition"

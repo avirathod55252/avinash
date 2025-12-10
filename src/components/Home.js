@@ -35,55 +35,26 @@ export default function Home() {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white leading-tight">
           AVINASH <span className="text-yellow-400 drop-shadow-lg">RATHOD</span>
         </h1>
 
         {/* Flag Line */}
-        <div className="flex mt-4 rounded-full overflow-hidden shadow-xl">
+        <div className="flex mt-4 rounded-full overflow-hidden shadow-xl scale-90 sm:scale-100">
           <div className="h-1.5 w-20 sm:w-24 md:w-28 bg-orange-500" />
           <div className="h-1.5 w-20 sm:w-24 md:w-28 bg-white" />
           <div className="h-1.5 w-20 sm:w-24 md:w-28 bg-green-500" />
         </div>
 
         {/* Subtitle */}
-        <h2 className="mt-6 text-sm sm:text-base md:text-lg tracking-wide text-gray-200 font-semibold">
+        <h2 className="mt-6 text-sm sm:text-base md:text-lg tracking-wide text-gray-200 font-semibold px-2">
           Unique Portfolio of Avinash Rathod
         </h2>
 
-        <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed px-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-300 max-w-xl leading-relaxed px-2">
           Where AI-driven Innovation Meets Excellence — Showcasing Skills,
           Intelligence, Creativity, and Professional Growth.
         </p>
-
-        {/* AI Search Bar */}
-        <div
-          className="mt-12 w-full max-w-4xl bg-white/90 dark:bg-black/70 backdrop-blur-xl 
-          rounded-2xl shadow-xl p-2 flex flex-col md:flex-row gap-2 border 
-          border-gray-200 dark:border-white/20"
-        >
-          <div
-            className="flex items-center flex-1 px-4 py-3 border border-gray-200 
-            dark:border-white/20 rounded-xl bg-gray-50 dark:bg-black/40 
-            focus-within:ring-2 focus-within:ring-red-500 transition"
-          >
-            <span className="text-gray-400 mr-2">🤖</span>
-            <input
-              type="text"
-              placeholder="Ask AI about skills, projects, achievements..."
-              className="w-full outline-none bg-transparent text-sm md:text-base 
-              text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
-            />
-          </div>
-
-          <button
-            className="bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold 
-            px-8 py-3 rounded-xl hover:from-pink-600 hover:to-red-600 transition-all duration-200 
-            shadow-md hover:shadow-xl active:scale-95 text-sm md:text-base"
-          >
-            Search
-          </button>
-        </div>
 
         {/* Categories */}
         <div className="mt-10 text-xs sm:text-sm text-white/90">
@@ -107,6 +78,26 @@ export default function Home() {
                 {name}
               </a>
             ))}
+          </div>
+
+          {/* Down Arrow for Introduction */}
+          <div className="flex justify-center mt-10 animate-bounce">
+            <a href="#introduction">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-8 h-8 text-white opacity-80 hover:opacity-100 transition"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 12.75l-7.5 7.5-7.5-7.5M19.5 3.75l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>

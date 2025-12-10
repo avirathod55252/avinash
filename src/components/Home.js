@@ -10,24 +10,24 @@ export default function Home() {
       {/* Sliding Background */}
       <SlidingBackground />
 
-      {/* Overlay */}
+      {/* Overlay - LIGHTER */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 
-        dark:from-black/80 dark:via-black/60 dark:to-black/90"
+        className="absolute inset-0 bg-gradient-to-b 
+        from-black/40 via-black/20 to-black/40
+        dark:from-black/60 dark:via-black/40 dark:to-black/70"
       ></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
-        {/* Emblem (Improved) */}
+        {/* Emblem */}
         <div className="mb-6 flex justify-center">
           <img
-            src="/emblem.png"
+            src="/tiger.png"
             alt="Emblem"
             className="
               h-24 md:h-32 lg:h-40 
               object-contain
               mix-blend-screen 
-              
               drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]
               dark:drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]
             "

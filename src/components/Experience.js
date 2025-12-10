@@ -9,7 +9,7 @@ export default function Experience() {
       companyUrl: "https://ahmednagar.cantt.gov.in/",
       duration: "22 July 2024 To 31 August 2025",
       logo: "/acbc.png",
-      badge: "/em.png",
+      badge: "/tiger.png",
       points: [
         "Website Management & Maintenance – Developed new pages, enhanced the homepage slider, built modules, and performed UAT for RTRM and E-Chhawani platforms.",
         "GIS & Software Setup (BARC Project) – Installed and configured BARC Change Detection Software and executed GIS workflows using QGIS.",

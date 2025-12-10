@@ -2,10 +2,10 @@ import React from "react";
 import { PhoneCall, Mail } from "lucide-react";
 import profilePic from "./avii.jpeg";
 
-export default function Hero() {
+export default function About() {
   return (
     <section
-      id="home"
+      id="aboutme"
       className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-gray-800 dark:text-gray-100 transition-all duration-500"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
@@ -52,9 +52,9 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-gray-500 dark:text-gray-400 text-sm">
-            I Previosly worked as Computer Programmer at Ahilyanagar Cantonemnt
+            I Previously worked as Computer Programmer at Ahilyanagar Cantonemnt
             Board. Where I Gained 1 Year and 1 Month Professional Experience in
-            Development and Maintaining Various Government web Systems
+            Developing and managed government web systems.
           </p>
           <p className="mt-6 text-gray-500 dark:text-gray-400 text-sm">
             Passionate about creating interactive, accessible, and modern web

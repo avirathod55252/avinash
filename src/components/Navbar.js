@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {
   Home,
   Code,
@@ -10,7 +11,10 @@ import {
   X,
   Images,
   PhoneCall,
+  User,
+  PersonStandingIcon,
 } from "lucide-react";
+import { FcEngineering } from "react-icons/fc";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,6 +45,11 @@ export default function Navbar() {
 
   const navLinks = [
     { id: "home", label: "Home", icon: <Home className="w-4 h-4" /> },
+    {
+      id: "aboutme",
+      label: "Intro",
+      icon: <User className="w-4 h-4" />,
+    },
     { id: "skills", label: "Skills", icon: <Code className="w-4 h-4" /> },
     {
       id: "education",

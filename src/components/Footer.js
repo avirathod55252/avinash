@@ -88,6 +88,15 @@ export default function Footer() {
             Quick Links
           </h3>
 
+          <div className="flex justify-center gap-6 text-white colorful:text-black font-medium">
+            <a href="#home" className="hover:text-[#04A777] transition">
+              Home
+            </a>
+            <a href="#aboutme" className="hover:text-[#04A777] transition">
+              About Me
+            </a>
+          </div>
+
           {/* ⭐ Resume Button */}
           <a
             href="/resume.pdf"

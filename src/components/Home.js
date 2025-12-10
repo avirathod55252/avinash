@@ -82,7 +82,7 @@ export default function Home() {
 
           {/* Down Arrow for Introduction */}
           <div className="flex justify-center mt-10 animate-bounce">
-            <a href="#introduction">
+            <a href="#aboutme">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

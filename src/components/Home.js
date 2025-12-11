@@ -7,17 +7,20 @@ export default function Home() {
       id="home"
       className="relative min-h-screen w-full overflow-hidden pt-28 md:pt-32 bg-white dark:bg-black"
     >
-      {/* Sliding Background */}
+      {/* Background Slider */}
       <SlidingBackground />
 
-      {/* Overlay - LIGHTER */}
+      {/* Gradient Overlay for Text Clarity */}
       <div
-        className="absolute inset-0 bg-gradient-to-b 
-        from-black/40 via-black/20 to-black/40
-        dark:from-black/60 dark:via-black/40 dark:to-black/70"
+        className="
+          absolute inset-0 
+          bg-gradient-to-b 
+          from-black/50 via-black/30 to-black/60
+          dark:from-black/70 dark:via-black/50 dark:to-black/80
+        "
       ></div>
 
-      {/* Main Content */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
         {/* Emblem */}
         <div className="mb-6 flex justify-center">
@@ -26,7 +29,7 @@ export default function Home() {
             alt="Emblem"
             className="
               h-24 md:h-32 lg:h-40 
-              object-contain
+              object-contain 
               mix-blend-screen 
               drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]
               dark:drop-shadow-[0_0_40px_rgba(255,255,255,0.4)]
@@ -34,7 +37,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Title */}
+        {/* Name */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white leading-tight">
           AVINASH <span className="text-yellow-400 drop-shadow-lg">RATHOD</span>
         </h1>
@@ -48,15 +51,15 @@ export default function Home() {
 
         {/* Subtitle */}
         <h2 className="mt-6 text-sm sm:text-base md:text-lg tracking-wide text-gray-200 font-semibold px-2">
-          Unique Portfolio of Avinash Rathod
+          “India’s Spirit. Engineer’s Mind. Creator’s Vision.”
         </h2>
 
         <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-300 max-w-xl leading-relaxed px-2">
-          Where AI-driven Innovation Meets Excellence — Showcasing Skills,
-          Intelligence, Creativity, and Professional Growth.
+          “From India’s Iconic Heritage to the Future of AI — A Developer’s
+          Journey of Excellence, Creativity, and Purpose.”
         </p>
 
-        {/* Categories */}
+        {/* Explore Buttons */}
         <div className="mt-10 text-xs sm:text-sm text-white/90">
           <span className="font-semibold mr-2">Explore :</span>
 
@@ -72,15 +75,20 @@ export default function Home() {
               <a
                 key={i}
                 href={`#${name.toLowerCase()}`}
-                className="px-4 sm:px-5 py-2 rounded-full border border-white/20 
-                hover:bg-white/10 transition-all hover:scale-105 text-xs sm:text-sm"
+                className="
+                    px-4 sm:px-5 py-2 
+                    rounded-full border border-white/20 
+                    hover:bg-white/10 transition-all 
+                    hover:scale-105 
+                    text-xs sm:text-sm
+                  "
               >
                 {name}
               </a>
             ))}
           </div>
 
-          {/* Down Arrow for Introduction */}
+          {/* Down Arrow */}
           <div className="flex justify-center mt-10 animate-bounce">
             <a href="#aboutme">
               <svg

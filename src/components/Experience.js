@@ -5,11 +5,11 @@ export default function Experience() {
   const experiences = [
     {
       role: "Computer Programmer 1 Year and 1 Month of Experience",
-      company: "Ahilyanagar Cantonment Board ",
+      company: "Ahilyanagar Cantonment Board",
       companyUrl: "https://ahmednagar.cantt.gov.in/",
       duration: "22 July 2024 To 31 August 2025",
-      logo: "/acbc.png",
-      badge: "/tiger.png",
+      logo: "/acb.png",
+      logoClass: "w-full max-w-[350px] h-auto object-contain mx-auto sm:mx-0", // LARGE BANNER LOGO
       points: [
         "Website Management & Maintenance – Developed new pages, enhanced the homepage slider, built modules, and performed UAT for RTRM and E-Chhawani platforms.",
         "GIS & Software Setup (BARC Project) – Installed and configured BARC Change Detection Software and executed GIS workflows using QGIS.",
@@ -24,8 +24,10 @@ export default function Experience() {
     {
       role: "Technical Content Writer",
       company: "GeeksforGeeks (Remote)",
+      companyUrl: "https://www.geeksforgeeks.org/",
       duration: "Apr 2023 – Apr 2024",
       logo: "/gfg2.png",
+      logoClass: "w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto sm:mx-0", // SMALL SQUARE LOGO
       points: [
         "Published and improved 100+ technical articles.",
         "Secured 12th rank in Technical Scripter 2022.",
@@ -33,7 +35,8 @@ export default function Experience() {
         "Specialized in web development, programming languages, and data structures.",
         "Collaborated with editors to ensure high-quality content.",
         "Engaged with the GFG community through comments and feedback.",
-        "Also Trained New Content Writers and Reviewed their Articles for Quality Assurance.",
+        "Trained new content writers and reviewed their articles for quality assurance.",
+        "Live Demo – NEET AI Doctor Project (Gemini 3 Pro): https://aistudio.google.com/apps/drive/1rjNBVD5thijXK-CakSljD8CuDjWow3Bp?fullscreenApplet=true&showPreview=true&showAssistant=true",
       ],
     },
   ];
@@ -42,7 +45,7 @@ export default function Experience() {
     <section
       id="experience"
       className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 
-        dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
+      dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
@@ -61,20 +64,19 @@ export default function Experience() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl 
-                dark:shadow-gray-700 hover:shadow-2xl border border-blue-100 
-                dark:border-gray-700 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1"
+              dark:shadow-gray-700 hover:shadow-2xl border border-blue-100 
+              dark:border-gray-700 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* --- TOP ROW (Fixed Responsive) --- */}
+              {/* Top Row */}
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 mb-6">
                 {/* Logo + Role */}
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  {/* Company Logo */}
+                  {/* Company Logo (size is different for each experience) */}
                   {exp.logo && (
                     <img
                       src={exp.logo}
                       alt="Company Logo"
-                      className="w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 
-                        object-contain mx-auto sm:mx-0"
+                      className={exp.logoClass}
                     />
                   )}
 
@@ -88,16 +90,6 @@ export default function Experience() {
                     </p>
                   </div>
                 </div>
-
-                {/* Badge */}
-                {exp.badge && (
-                  <img
-                    src={exp.badge}
-                    alt="Badge"
-                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 
-                      object-contain mx-auto md:mx-0 hover:scale-105 transition duration-300"
-                  />
-                )}
               </div>
 
               {/* Company Name */}
@@ -107,8 +99,8 @@ export default function Experience() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-purple-600 dark:text-purple-400 
-                    hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
-                    transition-all duration-200 mb-3 inline-block text-center sm:text-left"
+                  hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
+                  transition-all duration-200 mb-3 inline-block text-center sm:text-left"
                 >
                   {exp.company}
                 </a>
@@ -126,7 +118,7 @@ export default function Experience() {
                 {exp.points.map((point, i) => (
                   <li
                     key={i}
-                    className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+                    className="hover:text-blue-600 dark:hover:text-blue-400 transition break-words"
                   >
                     {point}
                   </li>

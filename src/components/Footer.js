@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* ⭐ Resume Button */}
           <a
-            href="/resume.pdf"
+            href="/AviR.pdf"
             download
             className="
               inline-block px-6 py-3 font-semibold rounded-full text-white

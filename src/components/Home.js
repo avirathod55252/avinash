@@ -1,5 +1,6 @@
 import React from "react";
 import SlidingBackground from "./SlidingBackground";
+import TirangaFlight from "./TirangaFlight";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
     >
       {/* Background Slider */}
       <SlidingBackground />
+      <TirangaFlight />
 
       {/* Gradient Overlay for Text Clarity */}
       <div

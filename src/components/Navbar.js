@@ -15,6 +15,7 @@ import {
   PersonStandingIcon,
 } from "lucide-react";
 import { FcEngineering } from "react-icons/fc";
+import { color } from "framer-motion";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,6 +70,7 @@ export default function Navbar() {
     {
       id: "achievements",
       label: "Achievements",
+
       icon: <Award className="w-4 h-4" />,
     },
     { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },

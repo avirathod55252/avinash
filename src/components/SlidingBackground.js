@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const images = ["/gi.png", "/mi.png", "/redfort.png"];
+const images = ["/in.png"];
 
 export default function SlidingBackground() {
   const [index, setIndex] = useState(0);
@@ -17,19 +17,21 @@ export default function SlidingBackground() {
     <div className="absolute inset-0 overflow-hidden">
       {/* Background Image */}
       <div
+        key={index}
         className="
-          w-full h-full 
-          bg-cover bg-center 
-          transition-all duration-[1500ms] 
-          ease-out 
-          scale-110
+          w-full h-full
+          bg-cover
+          bg-center
+          scale-70 sm:scale-70
+          transition-transform duration-[2000ms]
+          ease-out
         "
         style={{
           backgroundImage: `url(${images[index]})`,
         }}
-      ></div>
+      />
 
-      {/* Soft dark overlay for readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
     </div>
   );

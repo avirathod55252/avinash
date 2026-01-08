@@ -4,39 +4,22 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
-      role: "Computer Programmer 1 Year and 1 Month of Experience",
+      role: "Computer Programmer – 1 Year and 1 Month Experience",
       company: "Ahilyanagar Cantonment Board",
       companyUrl: "https://ahmednagar.cantt.gov.in/",
       duration: "22 July 2024 To 31 August 2025",
       logo: "/acb.png",
-      logoClass: "w-full max-w-[350px] h-auto object-contain mx-auto sm:mx-0", // LARGE BANNER LOGO
+      logoClass: "w-full max-w-[350px] h-auto object-contain mx-auto sm:mx-0",
       points: [
-        "Website Management & Maintenance – Developed new pages, enhanced the homepage slider, built modules, and performed UAT for RTRM and E-Chhawani platforms.",
-        "GIS & Software Setup (BARC Project) – Installed and configured BARC Change Detection Software and executed GIS workflows using QGIS.",
-        "Zoho Developer – Migrated legacy systems from NIC to Zoho, administered Zoho Workplace, and implemented secure authentication via Government OneAuth (2FA).",
-        "Worked on major government software including RTRM, Parichay, and multiple e-Governance platforms.",
-        "Published and managed E-Procurement tenders under the Defence category with security validations and plugin checks using Java.",
-        "Handled daily operations of Government email systems such as NIC Mail and the official Government Mail Portal.",
-        "Managed statutory public service portals such as the RTI Portal (Right to Information Act, 2005) and CPGRAMS for citizen grievances.",
-        "Contributed to the Real Time Record Management (RTRM) project by DGDE, performing software testing and supporting modules related to encroachment monitoring on defence land.",
-      ],
-    },
-    {
-      role: "Technical Content Writer",
-      company: "GeeksforGeeks (Remote)",
-      companyUrl: "https://www.geeksforgeeks.org/",
-      duration: "Apr 2023 – Apr 2024",
-      logo: "/gfg2.png",
-      logoClass: "w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto sm:mx-0", // SMALL SQUARE LOGO
-      points: [
-        "Published and improved 100+ technical articles.",
-        "Secured 12th rank in Technical Scripter 2022.",
-        "Received 4.9/5 average rating from readers.",
-        "Specialized in web development, programming languages, and data structures.",
-        "Collaborated with editors to ensure high-quality content.",
-        "Engaged with the GFG community through comments and feedback.",
-        "Trained new content writers and reviewed their articles for quality assurance.",
-        "Live Demo – NEET AI Doctor Project (Gemini 3 Pro): https://aistudio.google.com/apps/drive/1rjNBVD5thijXK-CakSljD8CuDjWow3Bp?fullscreenApplet=true&showPreview=true&showAssistant=true",
+        "Office Website Maintenance – Maintained and updated the official office website to ensure smooth functionality, content accuracy, and availability of services.",
+        "NIC Email & Communication Handling – Regularly monitored and managed official NIC email communications to ensure timely responses and coordination with internal and external stakeholders.",
+        "Server-Related Support – Resolved server-related queries and issues, ensuring minimal downtime and smooth operation of hosted applications and services.",
+        "Network-Related Support – Assisted in resolving network connectivity and performance issues and coordinated with concerned teams to maintain stable network operations.",
+        "Learning & Implementation of C++ and Java – Learned and applied C++ and Java concepts focusing on security implementation for internal projects and portal development.",
+        "Tender Upload Portal – Managed complete tender lifecycle including creating/uploading tenders, verifying bidder details, coordinating with cross-functional teams, implementing Java-based security features, re-tendering if eligibility criteria not met, organizing pre-bid meetings, verifying BOQ and bid documents, and supporting final submission and tender/project allocation.",
+        "BARC Encroachment Detection Project – Worked on defense land encroachment detection using BARC Change Detection Software, QGIS, Google Earth Image Downloader; collected Shape Files, identified geographic boundaries, downloaded satellite images for multiple time periods, processed images with software, imported results into QGIS, and marked detected changes visually.",
+        "NIC Collaboration – eChhawani Portal UAT – Performed User Acceptance Testing for public service functionalities including online water bill and rent payments, services for defense area residents, employee registration, role-based access control, and service workflows to ensure functionality met user and organizational requirements.",
+        "Lease Extension & Renewal Portal – Contributed to Real-Time Record Management System for lease renewal and extension, performed end-to-end UAT, documented results in Excel, collaborated with cross-functional teams for issue resolution, and tested securely using leased line private network.",
       ],
     },
   ];
@@ -44,8 +27,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 
-      dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
+      className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
@@ -63,15 +45,13 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl 
-              dark:shadow-gray-700 hover:shadow-2xl border border-blue-100 
-              dark:border-gray-700 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1"
+              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-xl dark:shadow-gray-700 hover:shadow-2xl border border-blue-100 dark:border-gray-700 p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Top Row */}
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6 mb-6">
                 {/* Logo + Role */}
                 <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  {/* Company Logo (size is different for each experience) */}
+                  {/* Company Logo */}
                   {exp.logo && (
                     <img
                       src={exp.logo}
@@ -98,9 +78,7 @@ export default function Experience() {
                   href={exp.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-semibold text-purple-600 dark:text-purple-400 
-                  hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 
-                  transition-all duration-200 mb-3 inline-block text-center sm:text-left"
+                  className="text-lg font-semibold text-purple-600 dark:text-purple-400 hover:text-blue-700 dark:hover:text-blue-300 underline underline-offset-4 transition-all duration-200 mb-3 inline-block text-center sm:text-left"
                 >
                   {exp.company}
                 </a>
@@ -111,10 +89,7 @@ export default function Experience() {
               )}
 
               {/* Points List */}
-              <ul
-                className="list-disc ml-5 sm:ml-6 text-gray-700 dark:text-gray-300 
-                space-y-2 leading-relaxed text-left"
-              >
+              <ul className="list-disc ml-5 sm:ml-6 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed text-left">
                 {exp.points.map((point, i) => (
                   <li
                     key={i}

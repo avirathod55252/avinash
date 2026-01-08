@@ -48,7 +48,7 @@ export default function Navbar() {
     { id: "home", label: "Home", icon: <Home className="w-4 h-4" /> },
     {
       id: "aboutme",
-      label: "Intro",
+      label: "About_me",
       icon: <User className="w-4 h-4" />,
     },
     { id: "skills", label: "Skills", icon: <Code className="w-4 h-4" /> },
@@ -67,12 +67,12 @@ export default function Navbar() {
       label: "Projects",
       icon: <FolderGit2 className="w-4 h-4" />,
     },
-    {
-      id: "achievements",
-      label: "Achievements",
+    // {
+    //   id: "achievements",
+    //   label: "Achievements",
 
-      icon: <Award className="w-4 h-4" />,
-    },
+    //   icon: <Award className="w-4 h-4" />,
+    // },
     { id: "gallery", label: "Gallery", icon: <Images className="w-4 h-4" /> },
     {
       id: "reachme",

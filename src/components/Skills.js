@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  FaJava,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaGithub,
-  FaComments,
-} from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { FaJava, FaHtml5, FaCss3Alt, FaGithub } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
+import { SiSpring } from "react-icons/si"; // Spring Boot Icon
 import { motion } from "framer-motion";
 
 export default function Skills() {
@@ -18,13 +11,11 @@ export default function Skills() {
       icon: <FaJava className="text-red-500 text-4xl" />,
     },
     {
-      name: "HTML, CSS, JavaScript, React.js",
+      name: "HTML & CSS",
       icon: (
         <div className="flex gap-2">
           <FaHtml5 className="text-orange-500 text-3xl" />
           <FaCss3Alt className="text-blue-500 text-3xl" />
-          <SiJavascript className="text-yellow-500 text-3xl" />
-          <FaReact className="text-cyan-500 text-3xl" />
         </div>
       ),
     },
@@ -33,16 +24,16 @@ export default function Skills() {
       icon: <GiNetworkBars className="text-green-500 text-4xl" />,
     },
     {
-      name: "OOP Principles In Java",
+      name: "OOP Principles in Java",
       icon: <FaJava className="text-indigo-500 text-4xl" />,
     },
     {
-      name: " GitHub",
+      name: "Git",
       icon: <FaGithub className="text-gray-800 dark:text-gray-200 text-4xl" />,
     },
     {
-      name: "Communication Skills",
-      icon: <FaComments className="text-pink-500 text-4xl" />,
+      name: "Spring Boot",
+      icon: <SiSpring className="text-teal-500 text-4xl" />,
     },
   ];
 

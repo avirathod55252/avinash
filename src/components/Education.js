@@ -6,11 +6,13 @@ export default function Education() {
     {
       year: "2024",
       icon: (
-        <img
-          src="/dyp-logo.png"
-          alt="DYP Logo"
-          className="w-20 h-25 object-contain drop-shadow-lg "
-        />
+        <div className="w-24 h-24 rounded-full bg-blue-100 dark:bg-gray-800 flex items-center justify-center shadow-lg">
+          <img
+            src="/dyp-logo.png"
+            alt="DYP Logo"
+            className="w-20 h-20 object-contain"
+          />
+        </div>
       ),
       degree: "B.Tech in Computer Science and Engineering",
       institution: "Dr. D.Y. Patil College of Engineering, Kolhapur",
@@ -31,8 +33,8 @@ export default function Education() {
     {
       year: "2020",
       icon: (
-        <div className="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center shadow-md border border-purple-300">
-          <FaBookOpen className="text-purple-700 text-4xl" />
+        <div className="w-20 h-20 rounded-full bg-purple-100 dark:bg-purple-800 flex items-center justify-center shadow-md border border-purple-300 dark:border-purple-700">
+          <FaBookOpen className="text-purple-700 dark:text-purple-300 text-4xl" />
         </div>
       ),
       degree: "HSC (Science - PCMB)",
@@ -42,10 +44,13 @@ export default function Education() {
       score: "72.62%",
       date: "Feb 2020",
     },
-
     {
       year: "2018",
-      icon: <FaSchool className="text-pink-600 text-5xl" />,
+      icon: (
+        <div className="w-20 h-20 rounded-full bg-pink-100 dark:bg-pink-800 flex items-center justify-center shadow-md border border-pink-300 dark:border-pink-700">
+          <FaSchool className="text-pink-600 dark:text-pink-300 text-4xl" />
+        </div>
+      ),
       degree: "SSC",
       institution: "Sudharshan Vidyalay, Sangavi (Patan)",
       score: "82.60%",
@@ -56,8 +61,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 
-      dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300"
+      className="py-20 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-blue-700 dark:text-blue-300 mb-16">
@@ -65,6 +69,7 @@ export default function Education() {
         </h2>
 
         <div className="relative flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-16">
+          {/* Horizontal line */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-blue-300/40 dark:bg-blue-600/30"></div>
 
           {education.map((item, index) => (
@@ -72,24 +77,23 @@ export default function Education() {
               key={index}
               className="relative flex flex-col items-center text-center"
             >
+              {/* Timeline dot */}
               <div
-                className={`hidden lg:flex w-6 h-6 rounded-full border-4 
-                ${
+                className={`hidden lg:flex w-6 h-6 rounded-full border-4 ${
                   item.highlight
                     ? "border-blue-600 bg-blue-500"
                     : "border-gray-400 bg-gray-300 dark:bg-gray-600"
                 } z-10`}
               ></div>
 
+              {/* Card */}
               <div
                 className={`mt-6 lg:mt-10 p-6 rounded-xl shadow-xl backdrop-blur-lg 
-                  transition-all duration-300 border w-[300px]
-                  ${
+                  transition-all duration-300 border w-[300px] ${
                     item.highlight
                       ? "bg-white/70 dark:bg-gray-900/70 border-blue-500 shadow-blue-300"
                       : "bg-white/50 dark:bg-gray-800/70 border-gray-300"
-                  }
-                `}
+                  }`}
               >
                 <div className="flex justify-center mb-4">{item.icon}</div>
 
@@ -111,7 +115,6 @@ export default function Education() {
                   {item.institution}
                 </p>
 
-                {/* ✅ SHOW ADDRESS */}
                 {item.address && (
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     📍 {item.address}

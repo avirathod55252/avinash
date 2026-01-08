@@ -19,14 +19,14 @@ export default function App() {
       <Home />
       <Navbar />
       <About />
-      <QuoteSlider />
+      {/* <QuoteSlider /> */}
       <Skills />
       <Education />
       <Experience />
       <Projects />
-      <Achievements />
+      {/* <Achievements /> */}
       <Gallery />
-      <Ratings />
+      {/* <Ratings /> */}
       <Footer />
     </ThemeWrapper>
   );

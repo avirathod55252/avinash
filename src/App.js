@@ -16,7 +16,7 @@ import About from "./components/About.js";
 export default function App() {
   return (
     <ThemeWrapper>
-      <Home />
+      {/* <Home /> */}
       <Navbar />
       <About />
       {/* <QuoteSlider /> */}
